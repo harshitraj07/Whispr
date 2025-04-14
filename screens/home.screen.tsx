@@ -11,7 +11,6 @@ import {
 import React, { useEffect, useRef, useState } from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import { scale, verticalScale } from "react-native-size-matters";
-import AntDesign from "@expo/vector-icons/AntDesign";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { Audio } from "expo-av";
 import axios from "axios";
@@ -130,11 +129,11 @@ export default function HomeScreen() {
       const response = await fetch(uri);
       const audioBlob = await response.blob(); // Get audio as Blob
 
-      const witResponse = await fetch("https://api.wit.ai/speech?v=20230212", {
+      const witResponse = await fetch("https://api.wit.ai/speech?v=20230215", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${YOUR_WIT_AI_ACCESS_TOKEN}`,
-          "Content-Type": "audio/wav",
+          'Content-Type': 'audio/wav',
         },
         body: audioBlob,
       });
