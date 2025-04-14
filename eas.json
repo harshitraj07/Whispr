@@ -4,18 +4,20 @@
     "appVersionSource": "remote"
   },
   "build": {
+    "production": {
+      "autoIncrement": true,
+      "distribution": "store"
+    },
     "development": {
       "developmentClient": true,
       "distribution": "internal"
     },
     "preview": {
       "distribution": "internal"
-    },
-    "production": {
-      "autoIncrement": true
     }
   },
   "submit": {
     "production": {}
   }
+
 }
